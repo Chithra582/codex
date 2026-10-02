@@ -1,0 +1,20 @@
+name: codex-sandbox-executor
+description: Executes arbitrary terminal shell commands inside an isolated, constrained sandbox environment.
+input_schema:
+  type: object
+  properties:
+    command:
+      type: string
+      description: Shell command line to execute.
+    sandbox_profile:
+      type: string
+      enum:
+        - read_only
+        - workspace_write
+        - full_access
+      description: Sandbox isolation profile governing filesystem and network access.
+    timeout_ms:
+      type: integer
+      description: Maximum permitted execution time before termination (default 120000).
+  required:
+    - command

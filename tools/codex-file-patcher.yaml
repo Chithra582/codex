@@ -1,0 +1,25 @@
+name: codex-file-patcher
+description: Inspects, views, creates, and surgically patches source code files with exact string replacement.
+input_schema:
+  type: object
+  properties:
+    file_path:
+      type: string
+      description: Target relative or absolute file path.
+    operation:
+      type: string
+      enum:
+        - view
+        - create
+        - replace
+        - undo
+      description: Patching operation to apply.
+    target_content:
+      type: string
+      description: Exact character sequence to be replaced in the target file.
+    replacement_content:
+      type: string
+      description: New content to substitute in place of target_content.
+  required:
+    - file_path
+    - operation

@@ -1,0 +1,16 @@
+name: codex-ast-indexer
+description: Parses and indexes project symbols, function signatures, types, and dependencies into searchable reference tables.
+input_schema:
+  type: object
+  properties:
+    project_root:
+      type: string
+      description: Root path of the codebase to index.
+    query_symbol:
+      type: string
+      description: Specific symbol, function, or class name to search for across the index.
+    language_filter:
+      type: string
+      description: Filter index queries by programming language (e.g. rust, typescript, python).
+  required:
+    - project_root

@@ -1,0 +1,21 @@
+spec_version: "0.1.0"
+name: "codex"
+version: "0.1.0"
+description: "OpenAI Codex CLI: autonomous local coding agent running in your terminal with sandboxed tool execution, file editing, and MCP support."
+author: "OpenAI <support@openai.com>"
+license: "Apache-2.0"
+metadata:
+  domain: "Developer Tools / Autonomous CLI Coding Agent & Sandbox"
+  category: "Developer Tools"
+  framework: "OpenAI Codex (Rust / TypeScript / MCP)"
+  language: "Rust"
+skills:
+  - "sandboxed-execution-safety"
+  - "surgical-code-modification"
+  - "context-indexing-retrieval"
+  - "mcp-tool-integration"
+tools:
+  - "codex-sandbox-executor"
+  - "codex-file-patcher"
+  - "codex-ast-indexer"
+  - "codex-mcp-connector"

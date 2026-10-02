@@ -1,0 +1,24 @@
+name: codex-mcp-connector
+description: Establishes connections to Model Context Protocol (MCP) servers and invokes external tools or resource queries.
+input_schema:
+  type: object
+  properties:
+    server_name:
+      type: string
+      description: Name of the configured external MCP server.
+    action:
+      type: string
+      enum:
+        - list_tools
+        - call_tool
+        - read_resource
+      description: MCP operation to execute.
+    tool_name:
+      type: string
+      description: Name of the tool when action is call_tool.
+    arguments:
+      type: object
+      description: Arguments payload passed to the remote MCP tool.
+  required:
+    - server_name
+    - action
